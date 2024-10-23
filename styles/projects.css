@@ -1,0 +1,139 @@
+/* projects.css */ 
+#projects-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('../images/hero-bg-3.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#projects-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 15, 0.7);
+}
+
+#projects-hero .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+#projects-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(78, 255, 161, 0.5);
+}
+
+#projects-hero p {
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+#projects-grid {
+    padding: 4rem 0;
+}
+
+.projects-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--primary);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content  {
+    padding: 1.5rem;
+}
+
+.project-card h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.project-tech {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-demo {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-demo:hover {
+    background-color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    #projects-hero h1 {
+        font-size: 2rem;
+    }
+
+    #projects-hero p {
+        font-size: 1rem;
+    }
+
+    .projects-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+}

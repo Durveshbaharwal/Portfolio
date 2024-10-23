@@ -1,0 +1,124 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durvesh Sunil Baharwal - Projects</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Durvesh Sunil Baharwal Logo" class="logo">
+                <span class="logo-text">DURVESH SUNIL BAHARWAL</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+				<li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="projects-hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Innovative Projects">Innovative Projects</h1>
+                <p>Pushing the Boundaries of AI, Data Science, and Geospatial Technologies</p>
+            </div>
+        </section>
+
+        <section id="projects-grid">
+            <div class="container">
+                <div class="projects-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="ai-ml">AI & Machine Learning</button>
+                    <button class="category-btn" data-category="geospatial">Geospatial Technologies</button>
+                    <button class="category-btn" data-category="data-science">Data Science</button>
+                    <button class="category-btn" data-category="web-dev">Web Development</button>
+                </div>
+                <div class="projects-list">
+                    <div class="project-card" data-category="ai-ml">
+                        <img src="projects/project1/5.png" alt="Enhancing GPS Positioning Accuracy Using Machine Learning">
+                        <div class="project-content">
+                            <h3>Enhancing GPS Positioning Accuracy Using Machine Learning</h3>
+                            <p>Developed a hybrid GNSS positioning system using Least Square Estimation and Machine Learning Achieving 4.48m accuracy. Minimized Mean Absolute Error for Random Forest Regression up to 0.000122</p>
+                            <div class="project-tech"> GNSS, PVT, Machine Learning, Random Forest, Least Square Estimation, GPS.</div>
+                            <a href="./projects/project1.html" class="project-demo">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="geospatial">
+                        <img src="projects/project2/2.png" alt="Seismic Event Detection System">
+                        <div class="project-content">
+                            <h3>Seismic Detection Across the Solar System</h3>
+                            <p>Statistically programmed a Python algorithm to detect seismic events in noisy data from Apollo and Mars InSight missions and Applied 5+ algorithms Achieving 96% accuracy.</p>
+                            <div class="project-tech">Python, pandas, NumPy, Streamlit, ObsPy, Noise Filtering, Moving Average, Least Squares Fitting, Quadratic Model, Seismic Data.</div>
+                            <a href="./projects/project2.html" class="project-demo">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="geospatial">
+                        <img src="images/confidential.png" alt="Position, Velocity and Time Estimation in GNSS using MATLAB">
+                        <div class="project-content">
+                            <h3>Position, Velocity and Time Estimation in GNSS using MATLAB</h3>
+                            <p>Leveraged Adaptive Kalman Filter along with Maximum Likelihood Estimation that mitigated 30% of noise. Designed and implemented MATLAB Simulation of Moving Window Averages increasing accuracy to 87%</p>
+                            <div class="project-tech">MATLAB, MLE, Python, C++, GNSS, Kalman Filter.</div>
+                            <a href="./projects/project3.html" class="project-demo">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="ai-ml geospatial">
+                        <img src="images/landsegmentation.png" alt="Land Segmentation using Satellite Images">
+                        <div class="project-content">
+                            <h3>Land Segmentation using Satellite Images</h3>
+                            <p>Combined Effcient-Net encoder and CNN to predict forest area using 7000+ TIFF images. Achieved a segmentation accuracy of 85%.</p>
+                            <div class="project-tech">Convolutional Neural Networks (CNN), CUDA, Deep Learning, Encoders, Data Science.</div>
+                            <a href="./projects/project4.html" class="project-demo">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web-dev">
+                        <img src="images/hero-bg-3.jpg" alt="Nakshatra Navigators Space Tourism Website">
+                        <div class="project-content">
+                            <h3>Nakshatra Navigators Space Tourism Website</h3>
+                            <p>Designed and developed a website for Space Tourism encoraging space exlporers to find out ways to visit the planets in our galaxy and beyond. Integrated 3D models to enhance visualization.</p>
+                            <div class="project-tech">HTML, CSS, JavaScript, THREE.js, blender.</div>
+                            <a href="./projects/project5.html" class="project-demo">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="data-science">
+                        <img src="images/hero-bg-3.jpg" alt="Titanic Data Analysis & Visualization">
+                        <div class="project-content">
+                            <h3>Titanic Data Analysis & Visualization</h3>
+                            <p>Performed feature engineering, create visualizations, and build predictive models to understand the factors that influenced survival rates.</p>
+                            <div class="project-tech">Python, Pandas, Seaborn, Plotly, Scikit-learn.</div>
+                            <a href="./projects/project6.html" class="project-demo">View Project</a>
+                        </div>
+                    </div>
+                    <!-- Add more project cards here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Durvesh Sunil Baharwal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

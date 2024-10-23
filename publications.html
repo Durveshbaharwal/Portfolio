@@ -1,0 +1,87 @@
+<!-- publications.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durvesh Sunil Baharwal - Publications</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/publications.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="image/logo.png" alt="Durvesh Sunil Baharwal Logo" class="logo">
+                <span class="logo-text">DURVESH SUNIL BAHARWAL</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+				<li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="publications-hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Research & Publications">Research & Publications</h1>
+                <p>Advancing Knowledge in AI, Data Science, and Geospatial Technologies</p>
+            </div>
+        </section>
+
+        <section id="publications-grid">
+            <div class="container">
+                <div class="publications-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="ai-ml">AI & Machine Learning</button>
+                    <button class="category-btn" data-category="geospatial">Geospatial Technologies</button>
+                    <button class="category-btn" data-category="data-science">Data Science</button>
+                </div>
+                <div class="publications-list">
+                    <div class="publication-card" data-category="ai-ml">
+                        <h3>Enhancing GPS Positioning Accuracy Using Machine Learning Algorithms</h3>
+                        <p class="publication-journal">International Journal of Geoinformatics, 2024</p>
+                        <p class="publication-abstract">This paper presents a novel approach to improving GPS accuracy using advanced machine learning techniques...</p>
+                        <div class="publication-links">
+                            <a href="#" class="read-more">Read Full Paper</a>
+                            <a href="#" class="cite">Cite</a>
+                        </div>
+                    </div>
+                    <div class="publication-card" data-category="geospatial">
+                        <h3>Integration of LiDAR and Multispectral Imagery for Improved Land Cover Classification</h3>
+                        <p class="publication-journal">Remote Sensing of Environment, 2023</p>
+                        <p class="publication-abstract">This study explores the synergistic use of LiDAR and multispectral satellite imagery to enhance land cover classification accuracy...</p>
+                        <div class="publication-links">
+                            <a href="#" class="read-more">Read Full Paper</a>
+                            <a href="#" class="cite">Cite</a>
+                        </div>
+                    </div>
+                    <!-- Add more publication cards here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Durvesh Sunil Baharwal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/publications.js"></script>
+</body>
+</html>

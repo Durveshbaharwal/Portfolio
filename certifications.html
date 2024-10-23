@@ -1,0 +1,81 @@
+<!-- certifications.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durvesh Sunil Baharwal - Certifications</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/certifications.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Durvesh Sunil Baharwal Logo" class="logo">
+                <span class="logo-text">DURVESH SUNIL BAHARWAL</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="certifications.html" class="active">Certifications</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+				<li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="certifications-hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Professional Certifications">Professional Certifications</h1>
+                <p>Continuous Learning and Skill Development in AI, Data Science, and More</p>
+            </div>
+        </section>
+
+        <section id="certifications-grid">
+            <div class="container">
+                <div class="certifications-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="ai-ml">AI & Machine Learning</button>
+                    <button class="category-btn" data-category="data-science">Data Science</button>
+                    <button class="category-btn" data-category="cloud">Cloud Computing</button>
+                </div>
+                <div class="certifications-list">
+                    <div class="certification-card" data-category="ai-ml">
+                        <img src="https://images.credly.com/size/680x680/images/73e4a58b-a8ef-41a3-a7db-9183dd269882/image.png" alt="AWS Certified Machine Learning - Specialty">
+                        <h3>AWS Certified Machine Learning - Specialty</h3>
+                        <p>Amazon Web Services</p>
+                        <a href="#" class="view-certificate">View Certificate</a>
+                    </div>
+                    <div class="certification-card" data-category="data-science">
+                        <img src="https://images.credly.com/size/680x680/images/28944969-813a-43b9-944f-7910111ce764/Professional_Certificate_-_Data_Science.png" alt="IBM Data Science Professional Certificate">
+                        <h3>IBM Data Science Professional Certificate</h3>
+                        <p>IBM</p>
+                        <a href="#" class="view-certificate">View Certificate</a>
+                    </div>
+                    <!-- Add more certification cards here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Durvesh Sunil Baharwal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/certifications.js"></script>
+</body>
+</html>

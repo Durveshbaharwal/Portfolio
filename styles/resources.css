@@ -1,0 +1,155 @@
+/* resources.css */
+#resources-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('images/resources-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#resources-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 15, 0.7);
+}
+
+#resources-hero .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+#resources-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(78, 255, 161, 0.5);
+}
+
+#resources-hero p {
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+#resources-grid {
+    padding: 4rem 0;
+}
+
+.resources-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.resources-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-right: 1rem;
+}
+
+.resource-content {
+    flex: 1;
+}
+
+.resource-card h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.resource-card p {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.resource-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--secondary);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.download-btn:hover {
+    background-color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    #resources-hero h1 {
+        font-size: 2rem;
+    }
+
+    #resources-hero p {
+        font-size: 1rem;
+    }
+
+    .resources-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .resource-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}

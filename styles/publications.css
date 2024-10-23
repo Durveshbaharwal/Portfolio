@@ -1,0 +1,133 @@
+/* publications.css */
+#publications-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('images/publications-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#publications-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 15, 0.7);
+}
+
+#publications-hero .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+#publications-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(78, 255, 161, 0.5);
+}
+
+#publications-hero p {
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+#publications-grid {
+    padding: 4rem 0;
+}
+
+.publications-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.publications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.publication-card {
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+}
+
+.publication-card h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.publication-journal {
+    color: var(--secondary);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.publication-abstract {
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.publication-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-more,
+.cite {
+    display: inline-block;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover,
+.cite:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    #publications-hero h1 {
+        font-size: 2rem;
+    }
+
+    #publications-hero p {
+        font-size: 1rem;
+    }
+
+    .publications-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+}
