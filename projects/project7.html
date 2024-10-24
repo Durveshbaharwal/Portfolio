@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Data Analysis & Visualization</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/project.css">
+    <link rel="stylesheet" href="project-sub.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    
+    
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="../images/logo.png" alt="Durvesh Sunil Baharwal Logo" class="logo">
+                <span class="logo-text">DURVESH SUNIL BAHARWAL</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../projects.html" class="active">Projects</a></li>
+                <li><a href="../publications.html">Publications</a></li>
+                <li><a href="../certifications.html">Certifications</a></li>
+                <li><a href="../blogs.html">Blog</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="project-hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Titanic Data Analysis & Visualization">Titanic Data Analysis & Visualization</h1>
+                <p>an advanced analysis of the Titanic dataset</p>
+            </div>
+        </section>
+
+        <section id="project-details" class="container">
+            <div class="project-info">
+                <h2>Project Overview</h2>
+                <p>Performed feature engineering, create visualizations, and build predictive models to understand the factors that influenced survival rates.</p>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <strong>Technologies: </strong>Python, Pandas, Seaborn, Plotly, Scikit-learn.
+                    </div>
+                    <div class="meta-item">
+                        <strong>Duration:</strong> 1 week
+                    </div>
+                    <div class="meta-item">
+                        <strong>Team Size:</strong> 1 members
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-demo">
+                <h2>Project Preview</h2>
+                <iframe src="project7/project7-preview.html" frameborder="0" allowfullscreen></iframe>
+                <a href="https://github.com/Durveshbaharwal/Advance-Titanic-Data-Analysis-and-Visualization" target="_blank" class="demo-link">Open Github Repository</a>
+            </div>
+
+            <div class="project-details">
+                
+                <h2>Dataset</h2>
+                
+                <p>The dataset used for this analysis is the Titanic dataset available from the Seaborn library, which is a cleaned version of the original Titanic dataset from Kaggle.</p><br>
+                
+                <h2>Features</h2>
+                
+                <p>The following features were used in the analysis:<br>
+
+                <strong>1. pclass:</strong> Passenger class (1st, 2nd, 3rd)<br>
+                <strong>2. age:</strong> Age of the passenger<br>
+                <strong>3. sibsp:</strong> Number of siblings/spouses aboard<br>
+                <strong>4. parch:</strong> Number of parents/children aboard<br>
+                <strong>5. fare:</strong> Ticket fare<br>
+                <strong>6. fare_per_person:</strong> Fare per person, calculated as fare / (sibsp + parch + 1)<br>
+                <strong>7. is_alone:</strong> Binary feature indicating if a passenger is traveling alone</p><br>
+                
+                
+                <h2>How to Use This Repository</h2>
+                <div class="code-container">
+                    <h3 class="code-title">1. Clone the Repository</h3>
+                    <p>To get started, clone this repository to your local machine using the following command:</p>
+                    <div class="code-block">
+                        <pre><code>git clone https://github.com/Durveshbaharwal/Advance-Titanic-Data-Analysis-and-Visualization
+cd Advance-Titanic-Data-Analysis-and-Visualization</code></pre>
+                        <button class="copy-button" aria-label="Copy code">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="copy-message" hidden>Copied to clipboard!</p>
+                </div><br>
+
+                <div class="code-container">
+                    <h3 class="code-title">2. Install dependencies:</h3>
+                    <p>You can install the required libraries using pip:</p>
+                    <div class="code-block">
+                        <pre><code>pip install pandas seaborn matplotlib plotly scikit-learn lifelines</code></pre>
+                        <button class="copy-button" aria-label="Copy code">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="copy-message" hidden>Copied to clipboard!</p>
+                </div><br>
+
+            </div>
+
+            <div class="project-gallery">
+                <h2>Project Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="project7/1.png" alt="Correlation Heatmap">
+                    <img src="project7/2.png" alt="Principal Component Analysis (PCA)">
+                    <img src="project7/3.png" alt="Random Forest Model">
+                    <img src="project7/4.png" alt="Interactive Visualizations">
+                    <img src="project7/5.png" alt="Survival Analysis">
+                </div>
+                <div id="lightbox" class="lightbox">
+                    <span class="close-lightbox">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img">
+                    <div class="caption"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Durvesh Sunil Baharwal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="project-sub.js"></script>
+</body>
+</html>
+
+
