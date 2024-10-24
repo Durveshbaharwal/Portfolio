@@ -95,6 +95,7 @@
 }
 
 .publication-abstract {
+    font-family: var(--brand);
     color: var(--text);
     margin-bottom: 1rem;
 }
