@@ -1,63 +1,3 @@
-/* project1.css */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-
-
-
-body {
-    font-family: var(--heading), sans-serif;
-    background-color: var(--background);
-    color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-#project-hero {
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-image: url('../images/hero-bg-3.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-#project-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(15, 15, 15, 0.7);
-}
-
-#project-hero .hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-#project-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--accent);
-    text-shadow: 0 0 20px rgba(78, 255, 161, 0.5);
-}
-
-#project-hero p {
-    font-size: 1.2rem;
-    color: var(--text);
-}
-
 #project-details {
     padding: 4rem 0;
     padding-right: 1rem;
@@ -92,7 +32,7 @@ body {
     margin-bottom: 3rem;
 }
 
-.project-demo {
+.project-demo-frame {
     margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
@@ -102,7 +42,7 @@ body {
     border-radius: 10px;
 }
 
-.project-demo:hover {
+.project-demo-frame:hover {
     background-color: #000000;
     transition: background-color 0.3s ease;
 }
