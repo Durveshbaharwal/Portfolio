@@ -257,6 +257,7 @@ section h2 {
 .bio p {
 	font-family: var(--paragraph), sans-serif;
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 
@@ -355,6 +356,7 @@ section h2 {
     font-size: 1rem;
     color: var(--text);
     margin-top: 1rem;
+    text-align: justify;  
 }
 
 .project-tech {
@@ -433,6 +435,7 @@ section h2 {
 	font-family: var(--paragraph), sans-serif;
     color: var(--text);
     margin-bottom: 0.5rem;
+    text-align: justify;
 }
 
 .publication-link {
@@ -552,46 +555,6 @@ section h2 {
     opacity: 0.7;
 }
 
-.subscription-box {
-    background-color: var(--primary);
-    border-radius: 8px;
-    padding: 2rem;
-    margin-top: 3rem;
-    text-align: center;
-}
-
-.subscription-box form {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    justify-content: center;
-}
-
-.subscription-box input[type="email"] {
-    flex: 1;
-    max-width: 300px;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--text);
-}
-
-.subscription-box button {
-    background-color: var(--accent);
-    color: var(--background);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.subscription-box button:hover {
-    background-color: var(--secondary);
-    transform: translateY(-2px);
-}
-
 /* Resources Preview Section Styles */
 #resources {
     background-color: var(--background);
@@ -701,53 +664,6 @@ section h2 {
 
 
 /* Contact Section Styles */
-#contact-form {
-    display: grid;
-    gap: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contact-form input,
-#contact-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--text);
-    transition: all 0.3s ease;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px var(--accent);
-}
-
-#contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-#contact-form button {
-    background-color: var(--accent);
-    color: var(--background);
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-#contact-form button:hover {
-    background-color: var(--secondary);
-    transform: translateY(-2px);
-}
-
 .contact-info {
     margin-top: 2rem;
     text-align: center;
