@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const caption = document.querySelector('.caption');
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+
 
     function filterProjects(category) {
         projectCards.forEach(card => {
@@ -57,17 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
             lightbox.style.display = 'none';
         }
 
-        // Responsive navigation
-        if (e.target === hamburger || e.target.closest('.hamburger')) {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        }
-
-        // Close mobile menu when a link is clicked
-        if (e.target.matches('.nav-links a')) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
     });
 
     // Close lightbox with Escape key
