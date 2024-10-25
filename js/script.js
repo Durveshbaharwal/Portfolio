@@ -86,24 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial blog posts load
     filterBlogPosts('all');
-
-    // Form submission handlers
-    const contactForm = document.getElementById('contact-form');
-    const subscriptionForm = document.getElementById('subscription-form');
-
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // Add your form submission logic here
-        alert('Thank you for your message. I will get back to you soon!');
-        contactForm.reset();
-    });
-
-    subscriptionForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // Add your subscription logic here
-        alert('Thank you for subscribing to my blog!');
-        subscriptionForm.reset();
-    });
 	
 	// Resources download tracking
     const downloadButtons = document.querySelectorAll('.download-btn');
