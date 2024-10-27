@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { 
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -50,24 +50,120 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(changeBackground, 5000);
     }
 
-    // Category filtering for blog list page
-    const categoryButtons = document.querySelectorAll('.category-btn');
-    const blogCards = document.querySelectorAll('.blog-card');
+    // Category filtering function for multiple sections
+    const filterByCategory = (buttonsSelector, cardsSelector) => {
+        const categoryButtons = document.querySelectorAll(buttonsSelector);
+        const cards = document.querySelectorAll(cardsSelector);
 
-    if (categoryButtons.length > 0 && blogCards.length > 0) {
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const category = button.dataset.category;
+        if (categoryButtons.length > 0 && cards.length > 0) {
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.dataset.category;
 
-                // Update active button
-                document.querySelector('.category-btn.active')?.classList.remove('active');
-                button.classList.add('active');
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
 
-                // Filter blog cards
-                blogCards.forEach(card => {
-                    card.style.display = (category === 'all' || card.dataset.category === category) ? 'block' : 'none';
+                    // Filter cards
+                    cards.forEach(card => {
+                        const itemCategories = card.dataset.category.split(' ');
+                        card.style.display = (category === 'all' || itemCategories.includes(category)) ? 'block' : 'none';
+                    });
                 });
             });
+
+            // Show all items on initial load by simulating "all" button click
+            const allButton = document.querySelector(`${buttonsSelector}[data-category="all"]`);
+            if (allButton) {
+                allButton.click();
+            }
+        }
+    };
+
+    // Apply the category filter to different sections
+    filterByCategory('.category-btn', '.blog-card, .project-card, .certification-card, .publication-card, .resource-card');
+
+    // Image gallery lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const caption = document.querySelector('.caption');
+
+    document.addEventListener('click', (e) => {
+        // Open lightbox
+        if (e.target.matches('.gallery-grid img')) {
+            lightbox.style.display = 'block';
+            lightboxImg.src = e.target.src;
+            caption.textContent = e.target.alt;
+        }
+
+        // Close lightbox
+        if (e.target === lightbox || e.target.matches('.close-lightbox')) {
+            lightbox.style.display = 'none';
+        }
+
+        // Smooth scrolling for anchor links (event delegation)
+        if (e.target.matches('a[href^="#"]')) {
+            e.preventDefault();
+            document.querySelector(e.target.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.style.display === 'block') {
+            lightbox.style.display = 'none';
+        }
+    });
+
+    // Responsive font sizes
+    const adjustFontSizes = () => {
+        requestAnimationFrame(() => {
+            const width = window.innerWidth;
+            const heroTitle = document.querySelector('#project-hero h1');
+            const heroSubtitle = document.querySelector('#project-hero p');
+
+            heroTitle.style.fontSize = width < 768 ? '2rem' : '3rem';
+            heroSubtitle.style.fontSize = width < 768 ? '1rem' : '1.2rem';
         });
-    }
+    };
+
+    // Debounce function for resize event
+    const debounce = (func, delay) => {
+        let timeoutId;
+        return (...args) => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => func.apply(null, args), delay);
+        };
+    };
+
+    // Call adjustFontSizes on load and resize with debounce
+    window.addEventListener('load', adjustFontSizes);
+    window.addEventListener('resize', debounce(adjustFontSizes, 250));
+
+    // Code copy functionality
+    document.querySelectorAll('.code-container').forEach(container => {
+        const copyButton = container.querySelector('.copy-button');
+        const codeBlock = container.querySelector('code');
+        const copyMessage = container.querySelector('.copy-message');
+
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(codeBlock.textContent)
+                .then(() => {
+                    copyMessage.hidden = false;
+                    setTimeout(() => copyMessage.hidden = true, 2000);
+                })
+                .catch(err => console.error('Could not copy text: ', err));
+        });
+    });
+
+    // Download tracking for resources
+    const downloadButtons = document.querySelectorAll('.download-btn');
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const resourceName = e.target.closest('.resource-card').querySelector('h3').textContent;
+            console.log(`Resource downloaded: ${resourceName}`);
+        });
+    });
 });
